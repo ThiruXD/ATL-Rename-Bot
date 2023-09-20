@@ -1,0 +1,125 @@
+
+{
+
+    "name": "Gangster Baby Renamer Bot",
+
+    "description": "Telegram File Renamer Bot 4GB ",
+
+    "keywords": [
+
+        "Gangster Baby Renamer Bot ",
+
+        "4GB File",
+
+        "telegram",
+        
+        "LazyDeveloperr"
+
+    ],
+
+    "repository": "https://github.com/Maheshbot99/Rename1",
+
+    "success_url": "https://telegram.dog/Cinema_Rockets",
+
+    "env": {
+
+        "CHANNEL": {
+
+            "description": "Channel or Group user Name With @",
+
+            "required":true
+
+            
+
+         },
+
+        "STRING": {
+
+            "description": "Pyrogram String Session Use  @genStr_Bot",
+
+            "required": true
+
+        },
+
+        "API_ID": {
+
+            "description": "Your APP ID From my.telegram.org ",
+
+            "required": true
+
+        },
+
+        "API_HASH": {
+
+            "description": "Your API Hash From my.telegram.org ",
+
+            "required": true
+
+        },
+
+        "TOKEN": {
+
+            "description": "Your Bot Token From @BotFather",
+
+            "required": true
+
+        },
+
+        "ADMIN": {
+
+            "description":"Add Your User ID",
+
+            "required": true
+
+        },
+
+        "DB_URL":{
+
+             "description":"Database Url Get It From Mongo DB"
+
+        },
+
+        "DB_NAME":{
+
+               "description":"Database Name ",
+
+               "required":true
+
+        },
+
+        "LOG_CHANNEL":{
+
+             "description":"Channel Id Nedd Store Files Get Your channel id from Rose @MissRose_bot",
+
+             "required": true
+
+        },
+        "LAZY_PIC":{
+
+            "description":"Start up pic of your bot. Get from telegraph_Bot",
+
+            "required": true
+
+       }
+
+        
+
+    },
+
+    "buildpacks": [
+
+      {
+
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+
+      },
+
+      {
+
+        "url": "heroku/python"
+
+      }
+
+    ]
+
+}
