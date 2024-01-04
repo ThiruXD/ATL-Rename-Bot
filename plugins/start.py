@@ -35,7 +35,7 @@ else:
 async def start(client, message):
     old = insert(int(message.chat.id))
     try:
-        id = message.text.split(' ')[1]
+        id_one = message.text.split(' ')[1]
     except:
         txt=f"""**ʜᴇʟʟᴏ - {message.from_user.mention} , \nɪ  ᴀᴍ  ᴀɴ  ᴀᴅᴠᴀɴᴄᴇ  ꜰɪʟᴇ  ʀᴇɴᴀᴍᴇʀ  ᴀɴᴅ  ᴄᴏɴᴠᴇʀᴛᴇʀ  ʙᴏᴛ  ᴡɪᴛʜ  ᴘᴇʀᴍᴀɴᴇɴᴛ  ᴀɴᴅ  ᴄᴜsᴛᴏᴍ  ᴛʜᴜᴍʙɴᴀɪʟ  sᴜᴘᴘᴏʀᴛ. \n\nᴊᴜsᴛ  sᴇɴᴅ  ᴍᴇ  ᴀɴʏ  ᴠɪᴅᴇᴏ  ᴏʀ ᴅᴏᴄᴜᴍᴇɴᴛ !!**"""
         if LAZY_PIC:
@@ -52,7 +52,7 @@ async def start(client, message):
                                       InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ Uꜱ", url=f'https://t.me/{SUPPORT_GROUP}')],
                                       [InlineKeyboardButton("• Hᴇʟᴩ •",callback_data = "help")]
                                       ]))
-    if id:
+    if id_one:
         if old == True:
             try:
                 if LAZY_PIC:
@@ -72,11 +72,11 @@ async def start(client, message):
             except:
                 return
         else:
-            await client.send_message(id, "Congrats! You Won 100MB Upload limit")
-            _user_ = find_one(int(id))
+            await client.send_message(id_one, "Congrats! You Won 100MB Upload limit")
+            _user_ = find_one(int(id_one))
             limit = _user_["uploadlimit"]
             new_limit = limit + 104857600
-            uploadlimit(int(id), new_limit)
+            uploadlimit(int(id_one), new_limit)
             await message.reply_text(text=f"""**
 	ʜᴇʟʟᴏ - {message.from_user.mention} , \nɪ  ᴀᴍ  ᴀɴ  ᴀᴅᴠᴀɴᴄᴇ  ꜰɪʟᴇ  ʀᴇɴᴀᴍᴇʀ  ᴀɴᴅ  ᴄᴏɴᴠᴇʀᴛᴇʀ  ʙᴏᴛ  ᴡɪᴛʜ  ᴘᴇʀᴍᴀɴᴇɴᴛ  ᴀɴᴅ  ᴄᴜsᴛᴏᴍ  ᴛʜᴜᴍʙɴᴀɪʟ  sᴜᴘᴘᴏʀᴛ. \n\nᴊᴜsᴛ  sᴇɴᴅ  ᴍᴇ  ᴀɴʏ  ᴠɪᴅᴇᴏ  ᴏʀ ᴅᴏᴄᴜᴍᴇɴᴛ !!**
 	""", reply_to_message_id=message.id,
