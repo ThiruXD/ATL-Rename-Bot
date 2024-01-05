@@ -11,9 +11,9 @@ async def upgrade(bot,update):
 **Gold 🏆 :- 99₹**
 **Diamond 💎 :- 159₹**
 
-**⌾  My Nᴀᴍᴇ - Thiruselvan**
+**⌾  My Nᴀᴍᴇ - Narayan purohit**
 
-**⌾  Pʜᴏɴᴇ Pᴀy - Uᴩɪ :-** ```ThiruXD@ibl```
+**⌾  Pʜᴏɴᴇ Pᴀy - Uᴩɪ :-** ```coming soon```
 
 **🇳  🇴 🇹 🇪   :- ᴀꜰᴛᴇʀ ᴩᴀyᴍᴇɴᴛ ꜱᴇɴᴅ ꜱᴄʀᴇᴇɴ ꜱʜᴏᴛ'ꜱ ᴏꜰ ᴩᴀyᴍᴇɴᴛ ᴛᴏ ᴍᴇ - @{OWNER_USERNAME}**"""
 	keybord = InlineKeyboardMarkup([[ 
