@@ -33,38 +33,27 @@ else:
 
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client, message):
-    id_one = message.text.split(' ')[1]
     old = insert(int(message.chat.id))
     try:
         id_one = message.text.split(' ')[1]
     except:
-        txt = f"""**ʜᴇʟʟᴏ - {message.from_user.mention} , \nɪ  ᴀᴍ  ᴀɴ  ᴀᴅᴠᴀɴᴄᴇ  ꜰɪʟᴇ  ʀᴇɴᴀᴍᴇʀ  ᴀɴᴅ  ᴄᴏɴᴠᴇʀᴛᴇʀ  ʙᴏᴛ  ᴡɪᴛʜ  ᴘᴇʀᴍᴀɴᴇɴᴛ  ᴀɴᴅ  ᴄᴜsᴛᴏᴍ  ᴛʜᴜᴍʙɴᴀɪʟ  sᴜᴘᴘᴏʀᴛ. \n\nᴊᴜsᴛ  sᴇɴᴅ  ᴍᴇ  ᴀɴʏ  ᴠɪᴅᴇᴏ  ᴏʀ ᴅᴏᴄᴜᴍᴇɴᴛ !!**"""
-        if LAZY_PIC:
-            await message.reply_photo(photo=LAZY_PIC, caption=txt, reply_markup=InlineKeyboardMarkup(
+        txt=f"""**ʜᴇʟʟᴏ - {message.from_user.mention} , \nɪ  ᴀᴍ  ᴀɴ  ᴀᴅᴠᴀɴᴄᴇ  ꜰɪʟᴇ  ʀᴇɴᴀᴍᴇʀ  ᴀɴᴅ  ᴄᴏɴᴠᴇʀᴛᴇʀ  ʙᴏᴛ  ᴡɪᴛʜ  ᴘᴇʀᴍᴀɴᴇɴᴛ  ᴀɴᴅ  ᴄᴜsᴛᴏᴍ  ᴛʜᴜᴍʙɴᴀɪʟ  sᴜᴘᴘᴏʀᴛ. \n\nᴊᴜsᴛ  sᴇɴᴅ  ᴍᴇ  ᴀɴʏ  ᴠɪᴅᴇᴏ  ᴏʀ ᴅᴏᴄᴜᴍᴇɴᴛ !!**"""
+        await message.reply_photo(photo=LAZY_PIC,
+                                caption=txt,
+                                reply_markup=InlineKeyboardMarkup(
                                       [[InlineKeyboardButton("Pʀᴇᴍɪᴜᴍ Pʟᴀɴꜱ",callback_data = "upgrade")],
                                       [InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url=f'https://t.me/{UPDATES_CHANNEL}'),
                                       InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ Uꜱ", url=f'https://t.me/{SUPPORT_GROUP}')],
                                       [InlineKeyboardButton("• Hᴇʟᴩ •",callback_data = "help")]
                                       ]))
-        else:
-            await message.reply_text(text=txt, reply_markup=InlineKeyboardMarkup(
-                                      [[InlineKeyboardButton("Pʀᴇᴍɪᴜᴍ Pʟᴀɴꜱ",callback_data = "upgrade")],
-                                      [InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url=f'https://t.me/{UPDATES_CHANNEL}'),
-                                      InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ Uꜱ", url=f'https://t.me/{SUPPORT_GROUP}')],
-                                      [InlineKeyboardButton("• Hᴇʟᴩ •",callback_data = "help")]
-                                      ]))
+        return
     if id_one:
         if old == True:
             try:
-                if LAZY_PIC:
-                   await message.reply_photo(photo=LAZY_PIC, caption=txt, reply_markup=InlineKeyboardMarkup(
-                                      [[InlineKeyboardButton("Pʀᴇᴍɪᴜᴍ Pʟᴀɴꜱ",callback_data = "upgrade")],
-                                      [InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url=f'https://t.me/{UPDATES_CHANNEL}'),
-                                      InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ Uꜱ", url=f'https://t.me/{SUPPORT_GROUP}')],
-                                      [InlineKeyboardButton("• Hᴇʟᴩ •",callback_data = "help")]
-                                      ]))
-                else:
-                   await message.reply_text(text=txt, reply_markup=InlineKeyboardMarkup(
+                await client.send_message(id, "Your Friend is Already Using Our Bot")
+                await message.reply_photo(photo=LAZY_PIC,
+                                         caption=txt,
+                                         reply_markup=InlineKeyboardMarkup(
                                       [[InlineKeyboardButton("Pʀᴇᴍɪᴜᴍ Pʟᴀɴꜱ",callback_data = "upgrade")],
                                       [InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url=f'https://t.me/{UPDATES_CHANNEL}'),
                                       InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ Uꜱ", url=f'https://t.me/{SUPPORT_GROUP}')],
@@ -88,7 +77,6 @@ async def start(client, message):
                                       [InlineKeyboardButton("• Hᴇʟᴩ •",callback_data = "help")]
                                       ]))
     
-
 
 @Client.on_message((filters.private & (filters.document | filters.audio | filters.video)) | filters.channel & (filters.document | filters.audio | filters.video))
 async def send_doc(client,message):
