@@ -13,7 +13,7 @@ async def upgrade(bot,update):
 
 **⌾  My Nᴀᴍᴇ - Narayan purohit**
 
-**⌾  Pʜᴏɴᴇ Pᴀy - Uᴩɪ :-** ```coming soon```
+**⌾  Pʜᴏɴᴇ Pᴀy - Uᴩɪ :-** ```narayankpurohit@ibl```
 
 **🇳  🇴 🇹 🇪   :- ᴀꜰᴛᴇʀ ᴩᴀyᴍᴇɴᴛ ꜱᴇɴᴅ ꜱᴄʀᴇᴇɴ ꜱʜᴏᴛ'ꜱ ᴏꜰ ᴩᴀyᴍᴇɴᴛ ᴛᴏ ᴍᴇ - @{OWNER_USERNAME}**"""
 	keybord = InlineKeyboardMarkup([[ 
