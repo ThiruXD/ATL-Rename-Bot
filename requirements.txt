@@ -5,8 +5,8 @@ pyrogram
 TgCrypto
 pymongo==4.5.0
 dnspython
-Flask==2.2.2
-gunicorn==20.1.0
+Flask
+gunicorn
 telethon
 aiohttp
 mongo
