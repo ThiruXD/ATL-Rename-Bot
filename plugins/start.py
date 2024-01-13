@@ -50,7 +50,7 @@ async def start(client, message):
     if id_one:
         if old == True:
             try:
-                await client.send_message(id, "Your Friend is Already Using Our Bot")
+                await client.send_message(id_one, "Your Friend is Already Using Our Bot")
                 await message.reply_photo(photo=LAZY_PIC,
                                          caption=txt,
                                          reply_markup=InlineKeyboardMarkup(
